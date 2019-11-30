@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 import drone from '../assets/images/Drone.png';
@@ -13,7 +14,9 @@ function Home() {
           <span className="link">Store</span>
           <span className="link">Tutorials</span>
         </div>
-        <img src={logo} alt="Byrd MR" />
+        <Link to="/">
+          <img src={logo} alt="Byrd MR" />
+        </Link>
         <div>
           <span className="link">Blog</span>
           <span className="link">Contact</span>
