@@ -1,11 +1,15 @@
-/* Global variables */
+/**********************************************************************
+  Global variables
+**********************************************************************/
 :root {
   --primary-color: #ee5f20;
   --secondary-color: #f4f1ed;
   --tertiary-color: #d5d1cd;
 }
 
-/* Fonts */
+/**********************************************************************
+  Fonts
+**********************************************************************/
 @font-face {
   font-family: 'Archivo-Bold';
   src: local('Archivo-Bold'),
@@ -54,17 +58,22 @@
     url(./assets/fonts/Archivo-SemiBoldItalic.ttf) format('truetype');
 }
 
-/* Styles - General */
+/**********************************************************************
+  Styles
+**********************************************************************/
+
+/* General */
 h1,
 p {
   margin: 0;
 }
 
-/* Styles - Comment elements */
+/* Common */
 .page {
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .home {
@@ -76,6 +85,10 @@ p {
   flex-direction: row;
   justify-content: space-between;
   margin: 40px 60px;
+}
+
+.toolbar-nav {
+  min-width: 40px;
 }
 
 .toolbar img {
@@ -94,9 +107,12 @@ p {
   color: var(--primary-color);
 }
 
-/* Styles - Jumbotron */
+.page-content {
+  padding-top: 20px;
+}
+
+/* Jumbotron */
 .jumbotron {
-  width: 50%;
   margin: 0 auto;
   text-align: center;
 }
@@ -139,4 +155,35 @@ p {
   position: relative;
   top: -10px;
   width: 300px;
+}
+
+/**********************************************************************
+  Media queries
+**********************************************************************/
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .link {
+    display: none;
+  }
+
+  .page-content {
+    padding-top: 100px;
+    width: 100%;
+  }
+
+  .jumbotron-header {
+    margin: 30px;
+  }
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 480px) {
 }

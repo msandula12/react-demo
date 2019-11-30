@@ -4,7 +4,7 @@ import './App.css';
 
 import Home from './views/Home';
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Switch>
@@ -14,6 +14,6 @@ function App() {
       </Switch>
     </Router>
   );
-}
+};
 
 export default App;

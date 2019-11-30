@@ -6,20 +6,25 @@ import drone from '../assets/images/Drone.png';
 import logo from '../assets/images/Logo.png';
 import shadow from '../assets/images/Shadow.png';
 
-function Home() {
+import MenuIcon from '../components/MenuIcon';
+
+const Home = () => {
   return (
     <div className="page home">
       <header className="toolbar">
-        <div>
+        <div className="toolbar-nav">
           <span className="link">Store</span>
           <span className="link">Tutorials</span>
         </div>
         <Link to="/">
           <img src={logo} alt="Byrd MR" />
         </Link>
-        <div>
+        <div className="toolbar-nav">
           <span className="link">Blog</span>
           <span className="link">Contact</span>
+          <span className="menu-icon">
+            <MenuIcon />
+          </span>
         </div>
       </header>
       <div className="page-content">
@@ -35,6 +40,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

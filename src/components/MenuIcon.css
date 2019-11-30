@@ -1,0 +1,21 @@
+.menu {
+  height: 10px;
+  width: 30px;
+  border-top: 2px solid #ee5f20;
+  position: relative;
+}
+
+.menu:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid #ee5f20;
+}
+
+.menu:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
