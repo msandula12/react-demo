@@ -100,7 +100,12 @@ a:hover {
 }
 
 .toolbar-nav {
-  min-width: 40px;
+  min-width: 100px;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .toolbar img {

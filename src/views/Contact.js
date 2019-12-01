@@ -50,7 +50,7 @@ const Contact = () => {
         <Link to="/">
           <img src={logo} alt="Byrd MR" />
         </Link>
-        <div className="toolbar-nav">
+        <div className="toolbar-nav flex-end">
           <span>
             <MenuIcon />
           </span>
