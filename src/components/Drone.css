@@ -1,0 +1,16 @@
+.drone {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.drone-drone {
+  width: 400px;
+}
+
+.drone-shadow {
+  position: absolute;
+  width: 300px;
+  left: 50px;
+  bottom: -10px;
+}

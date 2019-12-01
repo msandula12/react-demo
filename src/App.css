@@ -63,16 +63,6 @@
   font-family: Archivo-SemiBold;
 }
 
-.drone-drone {
-  width: 400px;
-}
-
-.drone-shadow {
-  position: relative;
-  top: -10px;
-  width: 300px;
-}
-
 /**********************************************************************
   Media queries
 **********************************************************************/
