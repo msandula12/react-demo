@@ -1,0 +1,41 @@
+.popout-menu {
+  background: var(--primary-color);
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.close {
+  color: white;
+  font-size: 20px;
+}
+
+.close:hover {
+  cursor: pointer;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 80px;
+}
+
+.link-alt {
+  text-align: right;
+  display: block;
+  color: white;
+  font-size: 30px;
+  font-family: Archivo-Medium;
+  transition: color 250ms ease;
+  margin-bottom: 5px;
+}

@@ -8,62 +8,68 @@ import logo from '../assets/images/Logo.png';
 
 import MenuIcon from '../components/MenuIcon';
 
+import MenuContext from '../context/MenuContext';
+
 const Toolbar = ({ showPages }) => {
   return (
-    <header className="toolbar">
-      {showPages ? (
-        <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Store
-          </Link>
-          <Link to="/" className="link">
-            Tutorials
-          </Link>
-        </div>
-      ) : (
-        <div className="toolbar-nav">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="link-icon fab fa-facebook-square" />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="link-icon fab fa-twitter" />
-          </a>
-        </div>
-      )}
+    <MenuContext.Consumer>
+      {({ toggleVisibility }) => (
+        <header className="toolbar">
+          {showPages ? (
+            <div className="toolbar-nav">
+              <Link to="/" className="link">
+                Store
+              </Link>
+              <Link to="/" className="link">
+                Tutorials
+              </Link>
+            </div>
+          ) : (
+            <div className="toolbar-nav">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="link-icon fab fa-facebook-square" />
+              </a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="link-icon fab fa-twitter" />
+              </a>
+            </div>
+          )}
 
-      {/* Display logo in center */}
-      <Link to="/">
-        <img src={logo} alt="Byrd MR" />
-      </Link>
+          {/* Display logo in center */}
+          <Link to="/">
+            <img src={logo} alt="Byrd MR" />
+          </Link>
 
-      {showPages ? (
-        <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Blog
-          </Link>
-          <Link to="/contact" className="link">
-            Contact
-          </Link>
-          <span className="menu-icon">
-            <MenuIcon />
-          </span>
-        </div>
-      ) : (
-        <div className="toolbar-nav flex-end">
-          <span>
-            <MenuIcon />
-          </span>
-        </div>
+          {showPages ? (
+            <div className="toolbar-nav">
+              <Link to="/" className="link">
+                Blog
+              </Link>
+              <Link to="/contact" className="link">
+                Contact
+              </Link>
+              <span className="menu-icon">
+                <MenuIcon onClick={toggleVisibility} />
+              </span>
+            </div>
+          ) : (
+            <div className="toolbar-nav flex-end">
+              <span>
+                <MenuIcon onClick={toggleVisibility} />
+              </span>
+            </div>
+          )}
+        </header>
       )}
-    </header>
+    </MenuContext.Consumer>
   );
 };
 
