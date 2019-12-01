@@ -1,0 +1,19 @@
+.button {
+  font-family: Archivo-SemiBold;
+  font-size: 18px;
+  background: var(--primary-color);
+  border: none;
+  border-radius: 2px;
+  padding: 20px;
+  color: white;
+  transition: box-shadow 250ms ease;
+}
+
+.button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.button i {
+  margin-left: 15px;
+}

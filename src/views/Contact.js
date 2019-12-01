@@ -4,6 +4,7 @@ import '../App.css';
 
 import logo from '../assets/images/Logo.png';
 
+import Button from '../components/Button';
 import MenuIcon from '../components/MenuIcon';
 import TextInput from '../components/TextInput';
 
@@ -29,13 +30,20 @@ const Contact = () => {
         </div>
       </header>
       <div className="page-content">
-        <TextInput label="Full name" placeholder="Enter your full name" />
-        <TextInput label="Email" placeholder="Enter your email" type="email" />
-        <TextInput
-          isMultiline
-          label="Message"
-          placeholder="What are your plans?"
-        />
+        <div className="contact-form">
+          <TextInput label="Full name" placeholder="Enter your full name" />
+          <TextInput
+            label="Email"
+            placeholder="Enter your email"
+            type="email"
+          />
+          <TextInput
+            isMultiline
+            label="Message"
+            placeholder="What are your plans?"
+          />
+          <Button label="Send Message" icon="fas fa-arrow-right" />
+        </div>
       </div>
     </div>
   );

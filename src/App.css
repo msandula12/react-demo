@@ -134,6 +134,11 @@ a:hover {
   padding-top: 20px;
 }
 
+.contact-form {
+  width: 600px;
+  margin: 100px auto 0;
+}
+
 /* Jumbotron */
 .jumbotron {
   margin: 0 auto;
