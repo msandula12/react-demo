@@ -9,6 +9,11 @@
   transition: box-shadow 250ms ease;
 }
 
+.button.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .button:hover {
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);

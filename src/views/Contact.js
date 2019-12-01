@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
@@ -9,6 +9,25 @@ import MenuIcon from '../components/MenuIcon';
 import TextInput from '../components/TextInput';
 
 const Contact = () => {
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = () => {
+    const input = {
+      'Full name': fullName,
+      Email: email,
+      Message: message
+    };
+    console.log(input);
+    console.log('Your message has been submitted!');
+    setFullName('');
+    setEmail('');
+    setMessage('');
+  };
+
+  const isUnableToSubmit = !fullName || !email || !message;
+
   return (
     <div className="page contact">
       <header className="toolbar">
@@ -39,18 +58,32 @@ const Contact = () => {
       </header>
       <div className="page-content">
         <div className="contact-form">
-          <TextInput label="Full name" placeholder="Enter your full name" />
+          <TextInput
+            label="Full name"
+            onChange={e => setFullName(e.target.value)}
+            placeholder="Enter your full name"
+            value={fullName}
+          />
           <TextInput
             label="Email"
+            onChange={e => setEmail(e.target.value)}
             placeholder="Enter your email"
             type="email"
+            value={email}
           />
           <TextInput
             isMultiline
             label="Message"
+            onChange={e => setMessage(e.target.value)}
             placeholder="What are your plans?"
+            value={message}
           />
-          <Button label="Send Message" icon="fas fa-arrow-right" />
+          <Button
+            disabled={isUnableToSubmit}
+            label="Send Message"
+            icon="fas fa-arrow-right"
+            onClick={handleSubmit}
+          />
         </div>
       </div>
     </div>
