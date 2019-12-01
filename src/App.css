@@ -198,7 +198,8 @@ a:hover {
 
 /* Tablet */
 @media (min-width: 480px) and (max-width: 1023px) {
-  .link {
+  .link,
+  .link-icon {
     display: none;
   }
 
@@ -214,12 +215,26 @@ a:hover {
 
 /* Mobile */
 @media (min-width: 320px) and (max-width: 479px) {
-  .link {
+  .link,
+  .link-icon {
     display: none;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
   }
 
   .page-content {
     width: 100%;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0 auto;
   }
 
   .drone-drone {

@@ -1,3 +1,11 @@
+.button-wrapper.disabled {
+  cursor: not-allowed;
+}
+
+.button-wrapper.disabled .button {
+  pointer-events: none;
+}
+
 .button {
   font-family: Archivo-SemiBold;
   font-size: 18px;
@@ -7,11 +15,8 @@
   padding: 20px;
   color: white;
   transition: box-shadow 250ms ease;
-}
-
-.button.disabled {
-  opacity: 0.4;
-  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .button:hover {

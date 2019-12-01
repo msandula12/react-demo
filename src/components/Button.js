@@ -5,13 +5,11 @@ import './Button.css';
 
 const Button = ({ disabled, icon, label, onClick }) => {
   return (
-    <button
-      className={`button ${disabled ? 'disabled' : ''}`}
-      disabled={disabled}
-      onClick={onClick}
-    >
-      {label} {icon && <i className={icon} />}
-    </button>
+    <div className={`button-wrapper ${disabled ? 'disabled' : ''}`}>
+      <button className="button" disabled={disabled} onClick={onClick}>
+        {label} {icon && <i className={icon} />}
+      </button>
+    </div>
   );
 };
 
