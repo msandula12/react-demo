@@ -5,6 +5,7 @@ import '../App.css';
 import logo from '../assets/images/Logo.png';
 
 import MenuIcon from '../components/MenuIcon';
+import TextInput from '../components/TextInput';
 
 const Contact = () => {
   return (
@@ -27,7 +28,15 @@ const Contact = () => {
           </span>
         </div>
       </header>
-      <div className="page-content">Contact us</div>
+      <div className="page-content">
+        <TextInput label="Full name" placeholder="Enter your full name" />
+        <TextInput label="Email" placeholder="Enter your email" type="email" />
+        <TextInput
+          isMultiline
+          label="Message"
+          placeholder="What are your plans?"
+        />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .menu {
   height: 10px;
   width: 30px;
-  border-top: 2px solid #ee5f20;
+  border-top: 2px solid var(--primary-color);
   position: relative;
 }
 
@@ -12,7 +12,7 @@
   width: 20px;
   left: 0;
   bottom: 0;
-  border-bottom: 2px solid #ee5f20;
+  border-bottom: 2px solid var(--primary-color);
 }
 
 .menu:hover {
