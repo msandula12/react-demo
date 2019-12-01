@@ -5,6 +5,7 @@
   --primary-color: #ee5f20;
   --secondary-color: #f4f1ed;
   --tertiary-color: #d5d1cd;
+  --black: #040404;
 }
 
 /**********************************************************************
@@ -96,14 +97,15 @@ p {
 }
 
 .link {
+  color: var(--black);
   text-transform: uppercase;
   margin: 20px;
   font-family: Archivo-SemiBold;
   transition: color 250ms ease;
+  text-decoration: none;
 }
 
 .link:hover {
-  cursor: pointer;
   color: var(--primary-color);
 }
 

@@ -2,15 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-import drone from '../assets/images/Drone.png';
 import logo from '../assets/images/Logo.png';
-import shadow from '../assets/images/Shadow.png';
 
 import MenuIcon from '../components/MenuIcon';
 
-const Home = () => {
+const Contact = () => {
   return (
-    <div className="page home">
+    <div className="page contact">
       <header className="toolbar">
         <div className="toolbar-nav">
           <Link to="/" className="link">
@@ -35,19 +33,9 @@ const Home = () => {
           </span>
         </div>
       </header>
-      <div className="page-content">
-        <div className="jumbotron">
-          <div className="jumbotron-image">
-            <img className="drone-drone" src={drone} alt="F-210 drone" />
-            <img className="drone-shadow" src={shadow} alt="" />
-          </div>
-          <h1 className="jumbotron-header">F-210</h1>
-          <p className="jumbotron-quote">"The fastest drone on the planet"</p>
-          <p className="jumbotron-tagline">— The Wirecutter</p>
-        </div>
-      </div>
+      <div className="page-content">Contact us</div>
     </div>
   );
 };
 
-export default Home;
+export default Contact;
