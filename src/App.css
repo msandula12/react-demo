@@ -169,7 +169,7 @@ p {
 }
 
 /* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 480px) and (max-width: 1023px) {
   .link {
     display: none;
   }
@@ -185,5 +185,35 @@ p {
 }
 
 /* Mobile */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 479px) {
+  .link {
+    display: none;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .drone-drone {
+    width: 300px;
+  }
+
+  .toolbar {
+    margin: 40px 0px;
+  }
+
+  .toolbar img {
+    width: 160px;
+  }
+
+  .drone-shadow {
+    position: relative;
+    top: -10px;
+    width: 225px;
+  }
+
+  .jumbotron-header {
+    margin: 30px 0 -30px;
+    font-size: 120px;
+  }
 }
