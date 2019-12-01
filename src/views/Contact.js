@@ -15,9 +15,9 @@ const Contact = () => {
 
   const handleSubmit = () => {
     const input = {
-      'Full name': fullName,
-      Email: email,
-      Message: message
+      fullName,
+      email,
+      message
     };
     console.log(input);
     console.log('Your message has been submitted!');
@@ -60,12 +60,14 @@ const Contact = () => {
         <div className="contact-form">
           <TextInput
             label="Full name"
+            name="fullName"
             onChange={e => setFullName(e.target.value)}
             placeholder="Enter your full name"
             value={fullName}
           />
           <TextInput
             label="Email"
+            name="email"
             onChange={e => setEmail(e.target.value)}
             placeholder="Enter your email"
             type="email"
@@ -74,6 +76,7 @@ const Contact = () => {
           <TextInput
             isMultiline
             label="Message"
+            name="message"
             onChange={e => setMessage(e.target.value)}
             placeholder="What are your plans?"
             value={message}

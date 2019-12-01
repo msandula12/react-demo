@@ -5,6 +5,7 @@ import './TextInput.css';
 const TextInput = ({
   isMultiline,
   label,
+  name,
   onChange,
   placeholder,
   type,
@@ -12,9 +13,10 @@ const TextInput = ({
 }) => {
   return (
     <div className="input">
-      {label && <label>{label}</label>}
+      {label && <label htmlFor={name}>{label}</label>}
       {isMultiline ? (
         <textarea
+          name={name}
           onChange={onChange}
           placeholder={placeholder}
           rows="4"
@@ -23,6 +25,7 @@ const TextInput = ({
       ) : (
         <input
           onChange={onChange}
+          name={name}
           placeholder={placeholder}
           type={type}
           value={value}
@@ -35,6 +38,7 @@ const TextInput = ({
 TextInput.propTypes = {
   isMultiline: PropTypes.bool,
   label: PropTypes.string,
+  name: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.string,
