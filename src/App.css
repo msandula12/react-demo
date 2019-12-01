@@ -1,85 +1,7 @@
 /**********************************************************************
-  Global variables
-**********************************************************************/
-:root {
-  --primary-color: #ee5f20;
-  --secondary-color: #f4f1ed;
-  --tertiary-color: #d5d1cd;
-  --black: #040404;
-  --gray: #ccc;
-}
-
-/**********************************************************************
-  Fonts
-**********************************************************************/
-@font-face {
-  font-family: 'Archivo-Bold';
-  src: local('Archivo-Bold'),
-    url(./assets/fonts/Archivo-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-BoldItalic';
-  src: local('Archivo-BoldItalic'),
-    url(./assets/fonts/Archivo-BoldItalic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-Italic';
-  src: local('Archivo-Italic'),
-    url(./assets/fonts/Archivo-Italic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-Medium';
-  src: local('Archivo-Medium'),
-    url(./assets/fonts/Archivo-Medium.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-MediumItalic';
-  src: local('Archivo-MediumItalic'),
-    url(./assets/fonts/Archivo-MediumItalic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-Regular';
-  src: local('Archivo-Regular'),
-    url(./assets/fonts/Archivo-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-SemiBold';
-  src: local('Archivo-SemiBold'),
-    url(./assets/fonts/Archivo-SemiBold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Archivo-SemiBoldItalic';
-  src: local('Archivo-SemiBoldItalic'),
-    url(./assets/fonts/Archivo-SemiBoldItalic.ttf) format('truetype');
-}
-
-/**********************************************************************
-  Styles
+  Common
 **********************************************************************/
 
-/* General */
-h1,
-p {
-  margin: 0;
-}
-
-a {
-  color: var(--black);
-  text-decoration: none;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-/* Common */
 .page {
   min-height: 100vh;
   padding: 20px;
@@ -92,42 +14,9 @@ a:hover {
   background: var(--secondary-color);
 }
 
-.toolbar {
+.flex-end {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 40px 60px;
-}
-
-.toolbar-nav {
-  min-width: 40px;
-}
-
-.toolbar img {
-  width: 200px;
-}
-
-.link-icon {
-  opacity: 0.3;
-  margin: 0 20px;
-  font-size: 20px;
-  transition: all 250ms ease;
-}
-
-.link-icon:hover {
-  opacity: 1;
-  color: var(--primary-color);
-}
-
-.link {
-  text-transform: uppercase;
-  margin: 20px;
-  font-family: Archivo-SemiBold;
-  transition: color 250ms ease;
-}
-
-.link:hover {
-  color: var(--primary-color);
+  justify-content: flex-end;
 }
 
 .page-content {
@@ -139,7 +28,6 @@ a:hover {
   margin: 100px auto 0;
 }
 
-/* Jumbotron */
 .jumbotron {
   margin: 0 auto;
   text-align: center;
@@ -191,18 +79,10 @@ a:hover {
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .menu-icon {
-    display: none;
-  }
 }
 
 /* Tablet */
 @media (min-width: 480px) and (max-width: 1023px) {
-  .link,
-  .link-icon {
-    display: none;
-  }
-
   .page-content {
     padding-top: 100px;
     width: 100%;
@@ -215,11 +95,6 @@ a:hover {
 
 /* Mobile */
 @media (min-width: 320px) and (max-width: 479px) {
-  .link,
-  .link-icon {
-    display: none;
-  }
-
   .button {
     width: 100%;
   }
@@ -239,14 +114,6 @@ a:hover {
 
   .drone-drone {
     width: 300px;
-  }
-
-  .toolbar {
-    margin: 40px 0px;
-  }
-
-  .toolbar img {
-    width: 160px;
   }
 
   .drone-shadow {

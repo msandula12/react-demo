@@ -1,13 +1,92 @@
+/**********************************************************************
+  Global variables
+**********************************************************************/
+:root {
+  --primary-color: #ee5f20;
+  --secondary-color: #f4f1ed;
+  --tertiary-color: #d5d1cd;
+  --black: #040404;
+  --gray: #ccc;
+}
+
+/**********************************************************************
+  Fonts
+**********************************************************************/
+@font-face {
+  font-family: 'Archivo-Bold';
+  src: local('Archivo-Bold'),
+    url(./assets/fonts/Archivo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-BoldItalic';
+  src: local('Archivo-BoldItalic'),
+    url(./assets/fonts/Archivo-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Italic';
+  src: local('Archivo-Italic'),
+    url(./assets/fonts/Archivo-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Medium';
+  src: local('Archivo-Medium'),
+    url(./assets/fonts/Archivo-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-MediumItalic';
+  src: local('Archivo-MediumItalic'),
+    url(./assets/fonts/Archivo-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Regular';
+  src: local('Archivo-Regular'),
+    url(./assets/fonts/Archivo-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-SemiBold';
+  src: local('Archivo-SemiBold'),
+    url(./assets/fonts/Archivo-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-SemiBoldItalic';
+  src: local('Archivo-SemiBoldItalic'),
+    url(./assets/fonts/Archivo-SemiBoldItalic.ttf) format('truetype');
+}
+
+/**********************************************************************
+  General
+**********************************************************************/
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
