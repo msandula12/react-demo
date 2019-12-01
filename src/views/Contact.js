@@ -11,24 +11,18 @@ const Contact = () => {
     <div className="page contact">
       <header className="toolbar">
         <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Store
-          </Link>
-          <Link to="/" className="link">
-            Tutorials
-          </Link>
+          <a href="https://facebook.com" target="_blank">
+            <i className="link-icon fab fa-facebook-square" />
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <i className="link-icon fab fa-twitter" />
+          </a>
         </div>
         <Link to="/">
           <img src={logo} alt="Byrd MR" />
         </Link>
         <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Blog
-          </Link>
-          <Link to="/contact" className="link">
-            Contact
-          </Link>
-          <span className="menu-icon">
+          <span>
             <MenuIcon />
           </span>
         </div>
