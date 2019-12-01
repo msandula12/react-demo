@@ -13,15 +13,23 @@ const Home = () => {
     <div className="page home">
       <header className="toolbar">
         <div className="toolbar-nav">
-          <span className="link">Store</span>
-          <span className="link">Tutorials</span>
+          <Link to="/" className="link">
+            Store
+          </Link>
+          <Link to="/" className="link">
+            Tutorials
+          </Link>
         </div>
         <Link to="/">
           <img src={logo} alt="Byrd MR" />
         </Link>
         <div className="toolbar-nav">
-          <span className="link">Blog</span>
-          <span className="link">Contact</span>
+          <Link to="/" className="link">
+            Blog
+          </Link>
+          <Link to="/contact" className="link">
+            Contact
+          </Link>
           <span className="menu-icon">
             <MenuIcon />
           </span>
