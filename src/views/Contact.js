@@ -13,10 +13,18 @@ const Contact = () => {
     <div className="page contact">
       <header className="toolbar">
         <div className="toolbar-nav">
-          <a href="https://facebook.com" target="_blank">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="link-icon fab fa-facebook-square" />
           </a>
-          <a href="https://twitter.com" target="_blank">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="link-icon fab fa-twitter" />
           </a>
         </div>
