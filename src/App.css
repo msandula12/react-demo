@@ -1,0 +1,219 @@
+/**********************************************************************
+  Global variables
+**********************************************************************/
+:root {
+  --primary-color: #ee5f20;
+  --secondary-color: #f4f1ed;
+  --tertiary-color: #d5d1cd;
+}
+
+/**********************************************************************
+  Fonts
+**********************************************************************/
+@font-face {
+  font-family: 'Archivo-Bold';
+  src: local('Archivo-Bold'),
+    url(./assets/fonts/Archivo-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-BoldItalic';
+  src: local('Archivo-BoldItalic'),
+    url(./assets/fonts/Archivo-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Italic';
+  src: local('Archivo-Italic'),
+    url(./assets/fonts/Archivo-Italic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Medium';
+  src: local('Archivo-Medium'),
+    url(./assets/fonts/Archivo-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-MediumItalic';
+  src: local('Archivo-MediumItalic'),
+    url(./assets/fonts/Archivo-MediumItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-Regular';
+  src: local('Archivo-Regular'),
+    url(./assets/fonts/Archivo-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-SemiBold';
+  src: local('Archivo-SemiBold'),
+    url(./assets/fonts/Archivo-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo-SemiBoldItalic';
+  src: local('Archivo-SemiBoldItalic'),
+    url(./assets/fonts/Archivo-SemiBoldItalic.ttf) format('truetype');
+}
+
+/**********************************************************************
+  Styles
+**********************************************************************/
+
+/* General */
+h1,
+p {
+  margin: 0;
+}
+
+/* Common */
+.page {
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.home {
+  background: var(--secondary-color);
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px 60px;
+}
+
+.toolbar-nav {
+  min-width: 40px;
+}
+
+.toolbar img {
+  width: 200px;
+}
+
+.link {
+  text-transform: uppercase;
+  margin: 20px;
+  font-family: Archivo-SemiBold;
+  transition: color 250ms ease;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.page-content {
+  padding-top: 20px;
+}
+
+/* Jumbotron */
+.jumbotron {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jumbotron-header {
+  font-family: Archivo-Bold;
+  font-size: 230px;
+  margin: -30px 0;
+  color: white;
+}
+
+.jumbotron-image {
+  margin-top: 20px;
+}
+
+.jumbotron-image img {
+  display: block;
+  margin: 0 auto;
+}
+
+.jumbotron-quote {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: Archivo-SemiBold;
+  margin-bottom: 5px;
+  color: var(--tertiary-color);
+}
+
+.jumbotron-tagline {
+  color: var(--tertiary-color);
+  font-size: 14px;
+  font-family: Archivo-SemiBold;
+}
+
+.drone-drone {
+  width: 400px;
+}
+
+.drone-shadow {
+  position: relative;
+  top: -10px;
+  width: 300px;
+}
+
+/**********************************************************************
+  Media queries
+**********************************************************************/
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .link {
+    display: none;
+  }
+
+  .page-content {
+    padding-top: 100px;
+    width: 100%;
+  }
+
+  .jumbotron-header {
+    margin: 30px;
+  }
+}
+
+/* Mobile */
+@media (min-width: 320px) and (max-width: 479px) {
+  .link {
+    display: none;
+  }
+
+  .page-content {
+    width: 100%;
+  }
+
+  .drone-drone {
+    width: 300px;
+  }
+
+  .toolbar {
+    margin: 40px 0px;
+  }
+
+  .toolbar img {
+    width: 160px;
+  }
+
+  .drone-shadow {
+    position: relative;
+    top: -10px;
+    width: 225px;
+  }
+
+  .jumbotron-header {
+    margin: 30px 0 -30px;
+    font-size: 120px;
+  }
+}
