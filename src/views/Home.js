@@ -1,40 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import '../App.css';
 
 import drone from '../assets/images/Drone.png';
-import logo from '../assets/images/Logo.png';
 import shadow from '../assets/images/Shadow.png';
 
-import MenuIcon from '../components/MenuIcon';
+import Toolbar from '../components/Toolbar';
 
 const Home = () => {
   return (
     <div className="page home">
-      <header className="toolbar">
-        <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Store
-          </Link>
-          <Link to="/" className="link">
-            Tutorials
-          </Link>
-        </div>
-        <Link to="/">
-          <img src={logo} alt="Byrd MR" />
-        </Link>
-        <div className="toolbar-nav">
-          <Link to="/" className="link">
-            Blog
-          </Link>
-          <Link to="/contact" className="link">
-            Contact
-          </Link>
-          <span className="menu-icon">
-            <MenuIcon />
-          </span>
-        </div>
-      </header>
+      <Toolbar showPages />
       <div className="page-content">
         <div className="jumbotron">
           <div className="jumbotron-image">
