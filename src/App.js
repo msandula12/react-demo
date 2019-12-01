@@ -6,10 +6,17 @@ import Contact from './views/Contact';
 import Home from './views/Home';
 import Menu from './views/Menu';
 
+import MenuContext from './context/MenuContext';
+
 const App = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const [menu, setMenu] = useState(false);
+
+  const toggleVisibility = () => {
+    setMenu(!menu);
+  };
+
   return (
-    <>
+    <MenuContext.Provider value={{ isVisible: menu, toggleVisibility }}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -21,9 +28,9 @@ const App = () => {
         </Switch>
 
         {/* Pop-out menu */}
-        {isMenuVisible && <Menu />}
+        {menu && <Menu />}
       </Router>
-    </>
+    </MenuContext.Provider>
   );
 };
 

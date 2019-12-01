@@ -12,6 +12,11 @@
   font-size: 20px;
 }
 
+.close:hover {
+  cursor: pointer;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 .menu-content {
   display: flex;
   justify-content: space-around;
